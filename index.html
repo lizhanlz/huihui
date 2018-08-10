@@ -21,7 +21,7 @@
             width: 150px;
             border: 1px solid #eee;
         }
-        #btn{
+        /* #btn{
             width:100px;
             text-align: center;
             font:16px/40px Arial,Verdana;
@@ -32,7 +32,7 @@
             border-radius:5px;
             cursor: pointer;
             box-shadow:2px 2px 5px rgba(0,0,0,0.5);
-        }
+        } */
     </style>
     <script type="text/javascript">
     /*
@@ -41,6 +41,9 @@
      *  3.图片旋转，同时透明度从0变成1，有层次感（位移translate）（当所有图片透明度都变为0的时候，才会开始）
      */
      window.onload=function(){
+				var audio = document.getElementById("music");
+				audio.play()
+
         var btn=document.getElementById('btn');
         var imgs=document.querySelectorAll('img');
         var allEnd=0;//用来判断所有的图片是否都完成了所有的运动步骤
@@ -147,7 +150,7 @@
 			<div class="imgs col-xs-4 col-md-4">
 					<img src="img/4.jpg" alt="...">
 			</div>
-			<div class="imgs col-xs-4 col-md-4">
+			<div id="btn" class="imgs col-xs-4 col-md-4">
 					<img src="img/5.jpg" alt="...">
 			</div>
 			<div class="imgs col-xs-4 col-md-4">
@@ -166,6 +169,9 @@
 			</div>
 		</div>
 	</div>
-	<div id="btn">飞起来吧！！</div>
+	<audio id="music" src="music/马良 - 往后余生.mp3" preload="auto" controls="controls" autoplay="autoplay" loop="loop">
+			Your browser does not support the audio tag.
+	</audio>
+
 </body>
 </html>
